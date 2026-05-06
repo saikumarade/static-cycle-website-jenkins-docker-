@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: cycle-shop
-          image: saikumarade84/cycle-shop:1.00 # Image that will be used to containers in the cluster
+          image:  # Image that will be used to containers in the cluster
           imagePullPolicy: Always
           ports:
             - containerPort: 8080 # The port that the container is running on in the cluster

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Shop — Cycle Store</title>
+      <meta name="keywords" content="cycles, shop, buy cycle">
+      <meta name="description" content="Browse and buy our premium cycles.">
+      <!-- Bootstrap -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- Site styles -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700,800&display=swap" rel="stylesheet">
+      <!-- Cart styles (NEW) -->
+      <link rel="stylesheet" href="css/cart.css">
+   </head>
+   <body>
+
+      <!-- ── Header (same as index.html) ──────────────────────── -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Cycle Store"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cycle.html">Our Cycle</a></li>
+                  <li class="nav-item active"><a class="nav-link" href="shop.html">Shop</a></li>
+                  <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="login_menu">
+                     <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="cart.html" style="position:relative;">
+                           <img src="images/trolly-icon.png" alt="Cart">
+                           <!-- badge injected by cart.js -->
+                        </a></li>
+                        <li><a href="#"><img src="images/search-icon.png" alt="Search"></a></li>
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+      <!-- ── /Header ─────────────────────────────────────────── -->
+
+      <!-- ── Page Title ─────────────────────────────────────── -->
+      <div style="background:#325662; padding: 40px 0 30px; text-align:center;">
+         <h1 style="color:#fff; font-size:34px; font-weight:700; margin:0 0 6px;">Our Shop</h1>
+         <p style="color:#f7c17b; margin:0;">Pick your perfect ride</p>
+      </div>
+
+      <!-- ── Products ───────────────────────────────────────── -->
+      <section class="shop-section">
+         <div class="container">
+
+            <!-- Filter bar -->
+            <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:36px;">
+               <button class="filter-btn active" data-filter="all">All</button>
+               <button class="filter-btn" data-filter="mountain">Mountain</button>
+               <button class="filter-btn" data-filter="road">Road</button>
+               <button class="filter-btn" data-filter="kids">Kids</button>
+               <button class="filter-btn" data-filter="electric">Electric</button>
+            </div>
+
+            <div class="row" id="product-grid">
+
+               <!-- Product 1 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="mountain">
+                  <div class="product-card">
+                     <span class="product-badge">Best Seller</span>
+                     <img src="images/img-2.png" alt="Trail Blazer MTB">
+                     <h4>Trail Blazer MTB</h4>
+                     <p class="product-desc">Rugged mountain bike with 21-speed Shimano gears, hydraulic disc brakes, and full suspension.</p>
+                     <div class="product-price">$<span>349</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('mtb-01','Trail Blazer MTB', 349, 'images/img-2.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 2 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="road">
+                  <div class="product-card">
+                     <span class="product-badge" style="background:#325662;color:#fff;">New</span>
+                     <img src="images/img-3.png" alt="Swift Road Pro">
+                     <h4>Swift Road Pro</h4>
+                     <p class="product-desc">Lightweight carbon-alloy frame road cycle built for speed, with aerodynamic drop handlebars.</p>
+                     <div class="product-price">$<span>279</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('road-01','Swift Road Pro', 279, 'images/img-3.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 3 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="mountain">
+                  <div class="product-card">
+                     <img src="images/img-4.png" alt="Summit Crusher">
+                     <h4>Summit Crusher</h4>
+                     <p class="product-desc">Heavy-duty mountain bike with 27.5" wheels, front suspension fork, and ergonomic saddle.</p>
+                     <div class="product-price">$<span>415</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('mtb-02','Summit Crusher', 415, 'images/img-4.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 4 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="electric">
+                  <div class="product-card">
+                     <span class="product-badge" style="background:#27ae60;color:#fff;">Electric</span>
+                     <img src="images/img-5.png" alt="Volt Rider E-Bike">
+                     <h4>Volt Rider E-Bike</h4>
+                     <p class="product-desc">250W brushless motor, 40 km range on a single charge, integrated LED display. Zero effort, max fun.</p>
+                     <div class="product-price">$<span>899</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('ebike-01','Volt Rider E-Bike', 899, 'images/img-5.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 5 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="kids">
+                  <div class="product-card">
+                     <span class="product-badge" style="background:#e67e22;color:#fff;">Kids</span>
+                     <img src="images/img-6.png" alt="Junior Flash">
+                     <h4>Junior Flash</h4>
+                     <p class="product-desc">Colorful 20" kids cycle with training-wheel mounts, coaster brake, and adjustable seat post.</p>
+                     <div class="product-price">$<span>149</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('kids-01','Junior Flash', 149, 'images/img-6.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 6 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="road">
+                  <div class="product-card">
+                     <span class="product-badge" style="background:#8e44ad;color:#fff;">Limited</span>
+                     <img src="images/img-7.png" alt="Aero Sprint 700C">
+                     <h4>Aero Sprint 700C</h4>
+                     <p class="product-desc">Race-grade 700C road bike with 105-groupset, tubeless-ready rims, and aggressive geometry.</p>
+                     <div class="product-price">$<span>599</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('road-02','Aero Sprint 700C', 599, 'images/img-7.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 7 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="mountain">
+                  <div class="product-card">
+                     <img src="images/img-8.png" alt="Rocky Enduro">
+                     <h4>Rocky Enduro</h4>
+                     <p class="product-desc">Enduro-style MTB with 29" wheels, tapered head tube, and dropper post for technical terrain.</p>
+                     <div class="product-price">$<span>520</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('mtb-03','Rocky Enduro', 520, 'images/img-8.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+               <!-- Product 8 -->
+               <div class="col-md-4 col-sm-6 product-item" data-category="electric">
+                  <div class="product-card">
+                     <span class="product-badge" style="background:#27ae60;color:#fff;">Electric</span>
+                     <img src="images/img-1.png" alt="City Pulse E-Commuter">
+                     <h4>City Pulse E-Commuter</h4>
+                     <p class="product-desc">Smart commuter e-bike with fenders, integrated lights, rear rack, and 60 km city range.</p>
+                     <div class="product-price">$<span>749</span></div>
+                     <button class="atc-btn"
+                        onclick="addToCart('ebike-02','City Pulse E-Commuter', 749, 'images/img-1.png')">
+                        <i class="fa fa-shopping-cart"></i> Add to Cart
+                     </button>
+                  </div>
+               </div>
+
+            </div><!-- /.row -->
+         </div><!-- /.container -->
+      </section>
+
+      <!-- ── Footer (matching existing pages) ───────────────── -->
+      <div class="footer_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12 padding_0">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                           width="600" height="400" frameborder="0" style="border:0; width:100%;" allowfullscreen=""></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="padding_left_0">Call Now +01 123467890</span></a></div>
+                  <div class="call_text"><a href="#"><img src="images/mail-icon.png"><span class="padding_left_0">demo@gmail.com</span></a></div>
+                  <div class="social_icon">
+                     <ul>
+                        <li><a href="#"><img src="images/fb-icon1.png"></a></li>
+                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                     </ul>
+                  </div>
+                  <input type="text" class="email_text" placeholder="Enter Your Email">
+                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free html Templates</a></p>
+         </div>
+      </div>
+
+      <!-- ── Scripts ─────────────────────────────────────────── -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/cart.js"></script>
+
+      <script>
+         // ── Category filter ──────────────────────────────────
+         document.querySelectorAll('.filter-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+               document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+               this.classList.add('active');
+               var filter = this.dataset.filter;
+               document.querySelectorAll('.product-item').forEach(function(item) {
+                  item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+               });
+            });
+         });
+      </script>
+
+      <style>
+         /* Filter buttons */
+         .filter-btn {
+            background: #fff; border: 1px solid #ddd; color: #555;
+            padding: 7px 20px; border-radius: 20px; cursor: pointer; font-size: 13px;
+            transition: all 0.2s;
+         }
+         .filter-btn:hover, .filter-btn.active {
+            background: #325662; color: #fff; border-color: #325662;
+         }
+      </style>
+   </body>
+</html>

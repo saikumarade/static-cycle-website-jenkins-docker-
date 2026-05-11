@@ -10,5 +10,11 @@ jobs:
     steps:
       - name: print hello world
         run: echo "hellow world"
+      - name: print working directory
+        run: pwd
+      - name: list of files
+        run: ls -a
+      - name: print message
+        run: echo "pipeline executed successfully"
 
   

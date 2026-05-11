@@ -1,0 +1,14 @@
+name: my first pipeline
+
+on: 
+  push:
+    branches: main
+
+jobs:
+  demo-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo "hellow world"
+
+  

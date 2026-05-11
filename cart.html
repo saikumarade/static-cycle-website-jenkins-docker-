@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Your Cart — Cycle Store</title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="css/responsive.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700,800&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="css/cart.css">
+   </head>
+   <body>
+
+      <!-- ── Header ─────────────────────────────────────────── -->
+      <div class="header_section">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="Cycle Store"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="cycle.html">Our Cycle</a></li>
+                  <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                  <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+               </ul>
+               <form class="form-inline my-2 my-lg-0">
+                  <div class="login_menu">
+                     <ul>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="cart.html" style="position:relative;">
+                           <img src="images/trolly-icon.png" alt="Cart">
+                        </a></li>
+                        <li><a href="#"><img src="images/search-icon.png" alt="Search"></a></li>
+                     </ul>
+                  </div>
+               </form>
+            </div>
+         </nav>
+      </div>
+
+      <!-- ── Page title ─────────────────────────────────────── -->
+      <div style="background:#325662; padding: 40px 0 30px; text-align:center;">
+         <h1 style="color:#fff; font-size:34px; font-weight:700; margin:0 0 6px;">Your Cart</h1>
+         <p style="color:#f7c17b; margin:0;">Review your items before checking out</p>
+      </div>
+
+      <!-- ── Cart content ───────────────────────────────────── -->
+      <section class="cart-page-section">
+         <div class="container">
+            <div class="row">
+
+               <!-- Items column -->
+               <div class="col-lg-8">
+                  <div id="cart-items-container">
+                     <!-- Rendered by cart.js -->
+                     <div style="text-align:center;padding:40px;color:#aaa;">
+                        <i class="fa fa-spinner fa-spin" style="font-size:32px;"></i>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Summary column -->
+               <div class="col-lg-4">
+                  <div id="cart-summary" class="cart-summary-box" style="display:none;">
+                     <h4>Order Summary</h4>
+                     <div class="cart-summary-row">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                     </div>
+                     <div class="cart-summary-row">
+                        <span>Shipping</span>
+                        <span style="color:#27ae60;">FREE</span>
+                     </div>
+                     <div class="cart-summary-row">
+                        <span>Tax (8%)</span>
+                        <span id="cart-tax">$0.00</span>
+                     </div>
+                     <div class="cart-summary-row grand">
+                        <span>Total</span>
+                        <span id="cart-grand">$0.00</span>
+                     </div>
+                     <button class="cart-checkout-btn" onclick="handleCheckout()">
+                        <i class="fa fa-lock"></i> Proceed to Checkout
+                     </button>
+                     <button class="cart-clear-btn" onclick="clearCart()">
+                        Clear Cart
+                     </button>
+                  </div>
+               </div>
+
+            </div><!-- /.row -->
+         </div><!-- /.container -->
+      </section>
+
+      <!-- ── Checkout success modal ──────────────────────────── -->
+      <div class="checkout-modal-overlay" id="checkout-modal">
+         <div class="checkout-modal">
+            <i class="fa fa-check-circle"></i>
+            <h3>Order Placed!</h3>
+            <p>Thank you for your purchase. Your cycle is on its way to you soon. We'll send a confirmation to your email.</p>
+            <button class="checkout-modal-close" onclick="closeCheckout()">Continue Shopping</button>
+         </div>
+      </div>
+
+      <!-- ── Footer ─────────────────────────────────────────── -->
+      <div class="footer_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-lg-8 col-sm-12 padding_0">
+                  <div class="map_main">
+                     <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France"
+                           width="600" height="400" frameborder="0" style="border:0; width:100%;" allowfullscreen=""></iframe>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-12">
+                  <div class="call_text"><a href="#"><img src="images/call-icon.png"><span class="padding_left_0">Call Now +01 123467890</span></a></div>
+                  <div class="call_text"><a href="#"><img src="images/mail-icon.png"><span class="padding_left_0">demo@gmail.com</span></a></div>
+                  <div class="social_icon">
+                     <ul>
+                        <li><a href="#"><img src="images/fb-icon1.png"></a></li>
+                        <li><a href="#"><img src="images/twitter-icon.png"></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
+                        <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                     </ul>
+                  </div>
+                  <input type="text" class="email_text" placeholder="Enter Your Email">
+                  <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">Copyright 2019 All Right Reserved By.<a href="https://html.design"> Free html Templates</a></p>
+         </div>
+      </div>
+
+      <!-- ── Scripts ─────────────────────────────────────────── -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/cart.js"></script>
+      <script>
+         function handleCheckout() {
+            var modal = document.getElementById('checkout-modal');
+            modal.classList.add('active');
+            // Clear cart on confirmed order
+            saveCart([]);
+            updateBadge();
+         }
+         function closeCheckout() {
+            document.getElementById('checkout-modal').classList.remove('active');
+            window.location.href = 'shop.html';
+         }
+         // expose saveCart / updateBadge from cart.js scope via re-declaration
+         // (cart.js already exposes them as globals)
+      </script>
+   </body>
+</html>
